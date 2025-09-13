@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - 8Chills</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+        }
+        .product-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .product-image {
+            transition: transform 0.3s ease;
+        }
+        .product-image:hover {
+            transform: scale(1.02);
+        }
+        .add-to-cart {
+            transition: all 0.3s ease;
+        }
+        .add-to-cart:hover {
+            background-color: #f59e0b;
+            transform: translateY(-2px);
+        }
+        .quantity-btn {
+            transition: all 0.2s ease;
+        }
+        .quantity-btn:hover {
+            background-color: #e5e7eb;
+        }
+        .cart-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #10b981;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transform: translateY(-100px);
+            transition: transform 0.5s ease;
+        }
+        .cart-notification.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+<!-- nav section -->
+    <div class="">
+        <!-- 8chills logo and hamburger menu -->
+        <div class="flex space-x-[6rem] mt-7 px-4">
+            <p class="text-2xl pl-6">
+                <span class="italic font-[700]">8Chills</span> <span class="invisible">Liquor Store</span>
+            </p>
+
+            <!-- hamburger menu -->
+            <div id="hamburgerMenu" class="space-y-2 ">
+                <div id="ham0" class="bg-black w-10 h-1 rounded-[20px] transition-transform "></div>
+                <div id="ham1" class="bg-black w-10 h-1 rounded-[20px]  transition-transform  duration-200"></div>
+                <div id="ham2" class="bg-black w-10 h-1 rounded-[20px] transition-transform  duration-200"></div>
+            </div>
+
+
+        </div>
+
+        <div id="hamMenuList" class="absolute z-50 flex w-full hidden justify-end transform translate-y-[-10px]">
+            <div class="bg-white px-5 py-2 text-2xl">
+                <div class="text-black flex flex-col space-y-2">
+                    <a href="index.html" class="block ">Home</a>
+                    <a href="shop.html" class="block ">Shop</a>
+                    <a href="#" class="block ">About</a>
+                    <a href="#" class="block ">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Product Details Section -->
+    <div  class="product-container">
+        <div id="jonJulio" class="bg-white rounded-lg shadow-lg overflow-hidden mt-8">
+            <div class="md:flex">
+                <div class="md:w-1/2 p-8">
+                    <img id="product-image" src="source files/don julio.png" alt="Product" class="w-full h-auto product-image rounded-lg">
+                    <!-- <div class="flex mt-4 space-x-2">
+                        <div class="w-1/4">
+                            <img src="https://via.placeholder.com/120" alt="Thumbnail" class="cursor-pointer border-2 border-amber-400 rounded">
+                        </div>
+                        <div class="w-1/4">
+                            <img src="https://via.placeholder.com/120" alt="Thumbnail" class="cursor-pointer border rounded">
+                        </div>
+                        <div class="w-1/4">
+                            <img src="https://via.placeholder.com/120" alt="Thumbnail" class="cursor-pointer border rounded">
+                        </div>
+                        <div class="w-1/4">
+                            <img src="https://via.placeholder.com/120" alt="Thumbnail" class="cursor-pointer border rounded">
+                        </div>
+                    </div> -->
+                </div>
+                <div class="md:w-1/2 p-8">
+                    <div class="mb-4">
+                        <span id="product-category" class="text-amber-500 font-semibold">Tequila</span>
+                        <h1 id="product-name" class="text-3xl font-bold text-gray-900 mt-2">Don Julio Reposado</h1>
+                        <div class="flex items-center mt-2">
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 ml-2">(42 reviews)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-baseline">
+                            <span id="product-price" class="text-2xl font-bold text-gray-900">GHC 1200.00</span>
+                            <span id="product-original-price" class="text-lg text-gray-500 line-through ml-2">GHC 1500.00</span>
+                            <span class="bg-red-100 text-red-800 text-sm font-semibold ml-3 px-2.5 py-0.5 rounded">Save 20%</span>
+                        </div>
+                        <p class="text-green-600 mt-1">In Stock</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h2 class="text-lg font-semibold text-gray-900 mb-2">Description</h2>
+                        <p id="product-description" class="text-gray-600">
+                            Don Julio Reposado is a premium tequila that has been aged for eight months in American white-oak barrels. 
+                            This aging process gives it a smooth, sophisticated taste with hints of caramel and vanilla, 
+                            balanced with the natural sweetness of the blue agave plant. Perfect for sipping neat or in premium cocktails.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h2 class="text-lg font-semibold text-gray-900 mb-2">Details</h2>
+                        <ul class="text-gray-600 list-disc pl-5">
+                            <li id="product-detail-1">Aged: 8 months in American white-oak barrels</li>
+                            <li id="product-detail-2">Alcohol Content: 40% ABV</li>
+                            <li id="product-detail-3">Volume: 750ml</li>
+                            <li id="product-detail-4">Origin: Jalisco, Mexico</li>
+                        </ul>
+                    </div>
+                    
+                    <d  iv class="flex items-center mb-6">
+                        <span class="text-gray-700 mr-4">Quantity:</span>
+                        <div class="flex items-center border border-gray-300 rounded">
+                            <button class="quantity-btn px-3 py-1 text-gray-600 hover:bg-gray-100" onclick="updateQuantity(-1)">-</button>
+                            <input type="number" id="quantity" value="1" min="1" max="10" class="w-12 text-center py-1 border-x border-gray-300">
+                            <button class="quantity-btn px-3 py-1 text-gray-600 hover:bg-gray-100" onclick="updateQuantity(1)">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <button class="add-to-cart bg-amber-500 text-white px-6 py-3 rounded-lg font-semibold flex items-center" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                        </button>
+                        <button class="border border-amber-500 text-amber-500 px-6 py-3 rounded-lg font-semibold">
+                            <i class="far fa-heart mr-2"></i> Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Reviews Section -->
+        <div class="bg-white rounded-lg shadow-lg mt-8 p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Customer Reviews</h2>
+            
+            <div class="flex items-center mb-6">
+                <div class="mr-4">
+                    <span class="text-4xl font-bold">4.5</span>
+                    <span class="text-gray-500">/5</span>
+                </div>
+                <div>
+                    <div class="flex text-amber-400 mb-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600">Based on 42 reviews</p>
+                </div>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="border-b border-gray-200 pb-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Michael K.</h3>
+                            <div class="flex text-amber-400 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <span class="text-gray-500 text-sm">2 days ago</span>
+                    </div>
+                    <p class="text-gray-600">This is by far the best tequila I've ever tasted. Smooth with just the right amount of oakiness. Perfect for sipping.</p>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Sarah J.</h3>
+                            <div class="flex text-amber-400 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <span class="text-gray-500 text-sm">1 week ago</span>
+                    </div>
+                    <p class="text-gray-600">Bought this for a special occasion and it did not disappoint. The vanilla and caramel notes are exquisite.</p>
+                </div>
+                
+                <div class="pb-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">David T.</h3>
+                            <div class="flex text-amber-400 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <span class="text-gray-500 text-sm">2 weeks ago</span>
+                    </div>
+                    <p class="text-gray-600">Great tequila, though a bit pricey. Perfect for those special moments when you want to treat yourself.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Related Products -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">You May Also Like</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/300" alt="Patrón Silver" class="w-full h-64 object-contain">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Patrón Silver</h3>
+                        <p class="text-amber-500">GHC 950.00</p>
+                        <button class="mt-2 w-full bg-amber-500 text-white py-2 rounded">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/300" alt="Jose Cuervo" class="w-full h-64 object-contain">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Jose Cuervo</h3>
+                        <p class="text-amber-500">GHC 800.00</p>
+                        <button class="mt-2 w-full bg-amber-500 text-white py-2 rounded">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/300" alt="Espolòn Blanco" class="w-full h-64 object-contain">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Espolòn Blanco</h3>
+                        <p class="text-amber-500">GHC 700.00</p>
+                        <button class="mt-2 w-full bg-amber-500 text-white py-2 rounded">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/300" alt="Herradura Reposado" class="w-full h-64 object-contain">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Herradura Reposado</h3>
+                        <p class="text-amber-500">GHC 1100.00</p>
+                        <button class="mt-2 w-full bg-amber-500 text-white py-2 rounded">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cart Notification -->
+    <div id="cart-notification" class="cart-notification">
+        <i class="fas fa-check-circle mr-2"></i> <span id="notification-text">Item added to cart!</span>
+    </div>
+
+    <script src="order.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

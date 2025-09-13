@@ -23,9 +23,23 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
   autoplay: {
-    delay: 15000,
+    delay: 5000,
     disableOnInteraction: false,
   }
 });
+
+let shopCatalogue; //shop catalogue
+
+shopCatalogue = document.getElementById('shopCatalogue');
+let catalogueItems = document.getElementById('catalogueItems');
+
+shopCatalogue.addEventListener('click',()=>{
+  catalogueItems.classList.toggle('hidden');
+});
+
+
+
+
+
 
 
