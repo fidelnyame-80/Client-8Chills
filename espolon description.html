@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase Azul Reposado - 8Chills</title>
+    <title>Espolon Reposado - 8Chills</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -74,7 +74,7 @@
             font-size: 14px;
         }
 
-        .clase-azul-bg {
+        .espolon-bg {
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
         }
 
@@ -133,13 +133,13 @@
             <div class="md:flex">
                 <div class="md:w-1/2 p-8 relative">
                     <div class="discount-badge absolute z-10">Limited Edition</div>
-                    <img src="source files/clase azul.png" alt="Clase Azul Reposado Tequila"
+                    <img src="source files/espolon.png" alt="espolon Reposado Tequila"
                         class="w-full h-auto product-image rounded-lg">
                 </div>
                 <div class="md:w-1/2 p-8">
                     <div class="mb-4">
-                        <span class="text-blue-600 font-semibold">Tequila - Reposado</span>
-                        <h1 class="text-3xl font-bold text-gray-900 mt-2">Clase Azul Reposado</h1>
+                        <span class="text-blue-600 font-semibold">Espolon</span>
+                        <h1 class="text-3xl font-bold text-gray-900 mt-2">Espolon </h1>
                         <div class="flex items-center mt-2">
                             <div class="flex text-amber-400">
                                 <i class="fas fa-star"></i>
@@ -163,11 +163,7 @@
                     <div class="mb-6">
                         <h2 class="text-lg font-semibold text-gray-900 mb-2">Description</h2>
                         <p class="text-gray-600">
-                            Clase Azul Reposado is an exceptionally smooth ultra-premium tequila that is aged for eight
-                            months in oak barrels.
-                            It's known for its distinctive hand-painted blue ceramic bottle and exquisite taste profile.
-                            This tequila offers notes of vanilla, caramel, and citrus with a rich, complex flavor that
-                            lingers on the palate.
+                            Espolòn Tequila Reposado is a bold and vibrant tequila crafted in the heart of Jalisco, Mexico. Aged for six months in American oak barrels, it delivers a perfect balance of smoothness and character. Known for its striking bottle design featuring iconic Day of the Dead artwork, Espolòn captures both tradition and rebellion. Expect rich notes of caramel, vanilla, and roasted agave, layered with a hint of spice for a warm, lingering finish.
                         </p>
                     </div>
 
@@ -303,10 +299,10 @@
                 </div>
 
                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="source files/clase azul.png"
-                        alt="Clase Azul Añejo" class="w-full h-64 object-contain p-4">
+                    <img src="source files/espolon.png"
+                        alt="espolon" class="w-full h-64 object-contain p-4">
                     <div class="p-4">
-                        <h3 class="font-semibold text-lg">Clase Azul Añejo</h3>
+                        <h3 class="font-semibold text-lg">Espolon Reposado</h3>
                         <p class="text-amber-500">GHC 3,200.00</p>
                         <button class="mt-2 w-full bg-amber-500 text-white py-2 rounded">Add to Cart</button>
                     </div>
@@ -333,14 +329,14 @@ function updateQuantity(change) {
   qtyInput.value = qty;
 }
 
-// Add Clase Azul Reposado to cart
+// Add espolon Reposado to cart
 function addToCart() {
   const qty = parseInt(document.getElementById("quantity").value) || 1;
   const product = {
-    name: "Clase Azul Reposado",
+    name: "Espolon Reposado",
     price: 2450,
     quantity: qty,
-    image: "source files/clase azul.png",
+    image: "source files/espolon.png",
   };
 
   // Check if already in cart
@@ -380,7 +376,7 @@ document.querySelectorAll(".grid button").forEach(btn => {
 // Wishlist functionality
 document.querySelector(".fa-heart")?.parentElement.addEventListener("click", () => {
   const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-  const item = "Clase Azul Reposado";
+  const item = "Espolon Reposado";
   if (!wishlist.includes(item)) {
     wishlist.push(item);
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
@@ -408,7 +404,7 @@ function showNotification(message) {
     notification.classList.remove("show");
     setTimeout(() => notification.remove(), 500);
   }, 2500);
-}
+};
 
     </script>
 </body>
