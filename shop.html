@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8Chills</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <body>
+        <!-- nav section -->
+        <div class="">
+            <!-- 8chills logo and hamburger menu -->
+            <div class="flex space-x-[6rem] mt-7 px-4">
+                <p class="text-2xl pl-6">
+                    <span class="italic font-[700]">8Chills</span> <span class="invisible">Liquor Store</span>
+                </p>
+
+                <!-- hamburger menu -->
+                <div id="hamburgerMenu" class="space-y-2 ">
+                    <div id="ham0" class="bg-black w-10 h-1 rounded-[20px] transition-transform "></div>
+                    <div id="ham1" class="bg-black w-10 h-1 rounded-[20px]  transition-transform  duration-200"></div>
+                    <div id="ham2" class="bg-black w-10 h-1 rounded-[20px] transition-transform  duration-200"></div>
+                </div>
+
+
+            </div>
+
+            <div id="hamMenuList" class="absolute z-10 flex w-full hidden justify-end  transform translate-y-[-10px]">
+                <div class="bg-white px-5 py-2 text-2xl ">
+                    <div class="text-black ">
+                        <a href="index.html">Home</a>
+                        <a href="shop.html">
+                            <p>Shop</p>
+                        </a>
+                        <a href="#">
+                            <p>About</p>
+                        </a>
+                        <a href="#">
+                            <p>Contact Us</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <hr class="w-[22rem] place-self-center mt-5"> -->
+        </div>
+
+        <!-- hero section -->
+        <div class="swiper w-full h-[70vh]">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide relative">
+                    <img src="source files/WhatsApp Image 2025-09-07 at 10.33.50_404af03f.jpg" alt=""
+                        class="w-full h-full object-cover">
+                    <div
+                        class="absolute inset-0 flex flex-col items-center justify-center h-[70vh] text-center z-10 bg-black/40">
+                        <p class="text-white text-3xl font-bold">Explore our Exclusive Liquor Collection</p>
+                        <p class="text-white text-xl mt-5">Redefining luxury in every pour. 🥂</p>
+
+                        <a href="shop.html"><button class="mt-10 px-6 py-3 bg-green-300 text-black font-semibold rounded 
+             hover:bg-amber-400 transition duration-1000 ease-in-out animate-bounce ">
+                                SHOP NOW
+                            </button></a>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <img src="source files/shop hero.png" alt="" class="w-full h-full object-cover">
+                    <div
+                        class="absolute inset-0 flex flex-col items-center justify-center h-[70vh] text-center z-10 bg-black/40">
+                        <p class="text-white text-3xl font-bold px-5"><span class="text-[3rem] pr-3">"</span>Curated wines, whiskeys, and spirits from around the world.</p>
+                        
+                         
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide flex w-full h-[60vh]">
+                    <img src="source files/shop hero2.png" alt="" class="h-[70vh] object-cover">
+                    <div
+                        class="absolute inset-0 flex flex-col items-center justify-center h-[70vh] text-center z-10 bg-black/40">
+                        <p class="text-white text-3xl font-bold">Stock up on premium liquor for nights worth remembering.</p>
+                       
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="index.js"></script>
+
+    </body>
+
+</html>
