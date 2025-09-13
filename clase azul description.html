@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase Azul Reposado - 8Chills</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        .product-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .product-image {
+            transition: transform 0.3s ease;
+        }
+
+        .product-image:hover {
+            transform: scale(1.02);
+        }
+
+        .add-to-cart {
+            transition: all 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            background-color: #f59e0b;
+            transform: translateY(-2px);
+        }
+
+        .quantity-btn {
+            transition: all 0.2s ease;
+        }
+
+        .quantity-btn:hover {
+            background-color: #e5e7eb;
+        }
+
+        .cart-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #10b981;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transform: translateY(-100px);
+            transition: transform 0.5s ease;
+        }
+
+        .cart-notification.show {
+            transform: translateY(0);
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #ef4444;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .clase-azul-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+
+        .nav-category {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nav-category:hover {
+            color: #f59e0b;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav section -->
+    <div class="">
+        <!-- 8chills logo and hamburger menu -->
+        <div class="flex space-x-[6rem] mt-7 px-4">
+            <p class="text-2xl pl-6">
+                <span class="italic font-[700]">8Chills</span> <span class="invisible">Liquor Store</span>
+            </p>
+
+            <!-- hamburger menu -->
+            <div id="hamburgerMenu" class="space-y-2 ">
+                <div id="ham0" class="bg-black w-10 h-1 rounded-[20px] transition-transform "></div>
+                <div id="ham1" class="bg-black w-10 h-1 rounded-[20px]  transition-transform  duration-200"></div>
+                <div id="ham2" class="bg-black w-10 h-1 rounded-[20px] transition-transform  duration-200"></div>
+            </div>
+
+
+        </div>
+
+        <div id="hamMenuList" class="absolute z-50 flex w-full hidden justify-end transform translate-y-[-10px]">
+            <div class="bg-white px-5 py-2 text-2xl">
+                <div class="text-black flex flex-col space-y-2">
+                    <a href="index.html" class="block ">Home</a>
+                    <a href="shop.html" class="block ">Shop</a>
+                    <a href="#" class="block ">About</a>
+                    <a href="#" class="block ">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- <hr class="w-[22rem] place-self-center mt-5"> -->
+    </div>
+
+    <!-- Category Navigation -->
+    <!-- <div class="clase-azul-bg py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center space-x-4 md:space-x-8">
+                <div class="nav-category text-white font-semibold py-2 px-4 rounded" data-category="tequila">Tequila</div>
+                <div class="nav-category text-white font-semibold py-2 px-4 rounded" data-category="reposado">Reposado</div>
+                <div class="nav-category text-white font-semibold py-2 px-4 rounded" data-category="premium">Premium</div>
+                <div class="nav-category text-white font-semibold py-2 px-4 rounded" data-category="mexican">Mexican</div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Product Details Section -->
+    <div class="product-container">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden mt-8">
+            <div class="md:flex">
+                <div class="md:w-1/2 p-8 relative">
+                    <div class="discount-badge absolute z-10">Limited Edition</div>
+                    <img src="source files/clase azul.png" alt="Clase Azul Reposado Tequila"
+                        class="w-full h-auto product-image rounded-lg">
+                </div>
+                <div class="md:w-1/2 p-8">
+                    <div class="mb-4">
+                        <span class="text-blue-600 font-semibold">Tequila - Reposado</span>
+                        <h1 class="text-3xl font-bold text-gray-900 mt-2">Clase Azul Reposado</h1>
+                        <div class="flex items-center mt-2">
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 ml-2">(127 reviews)</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex items-baseline">
+                            <span class="text-2xl font-bold text-gray-900">GHC 2,450.00</span>
+                            <span class="text-lg text-gray-500 line-through ml-2">GHC 2,750.00</span>
+                        </div>
+                        <p class="text-green-600 mt-1">In Stock - Limited Availability</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h2 class="text-lg font-semibold text-gray-900 mb-2">Description</h2>
+                        <p class="text-gray-600">
+                            Clase Azul Reposado is an exceptionally smooth ultra-premium tequila that is aged for eight
+                            months in oak barrels.
+                            It's known for its distinctive hand-painted blue ceramic bottle and exquisite taste profile.
+                            This tequila offers notes of vanilla, caramel, and citrus with a rich, complex flavor that
+                            lingers on the palate.
+                        </p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h2 class="text-lg font-semibold text-gray-900 mb-2">Details</h2>
+                        <ul class="text-gray-600 list-disc pl-5">
+                            <li><span class="font-semibold">Aged:</span> 8 months in oak barrels</li>
+                            <li><span class="font-semibold">Alcohol Content:</span> 40% ABV (80 Proof)</li>
+                            <li><span class="font-semibold">Volume:</span> 750ml</li>
+                            <li><span class="font-semibold">Origin:</span> Jalisco, Mexico</li>
+                            <li><span class="font-semibold">Tasting Notes:</span> Vanilla, caramel, citrus, and oak</li>
+                            <li><span class="font-semibold">Best Served:</span> Neat or in premium cocktails</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex items-center mb-6">
+                        <span class="text-gray-700 mr-4">Quantity:</span>
+                        <div class="flex items-center border border-gray-300 rounded">
+                            <button class="quantity-btn px-3 py-1 text-gray-600 hover:bg-gray-100"
+                                onclick="updateQuantity(-1)">-</button>
+                            <input type="number" id="quantity" value="1" min="1" max="5"
+                                class="w-12 text-center py-1 border-x border-gray-300">
+                            <button class="quantity-btn px-3 py-1 text-gray-600 hover:bg-gray-100"
+                                onclick="updateQuantity(1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <button
+                            class="add-to-cart bg-yellow-500 text-white px-6 py-3 rounded-lg font-semibold flex items-center"
+                            onclick="addToCart()">
+                            <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                        </button>
+                        <button class="border border-yellow-500 text-yellow-500 px-6 py-3 rounded-lg font-semibold">
+                            <i class="far fa-heart mr-2"></i> Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="bg-white rounded-lg shadow-lg mt-8 p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Customer Reviews</h2>
+
+            <div class="flex items-center mb-6">
+                <div class="mr-4">
+                    <span class="text-4xl font-bold">4.9</span>
+                    <span class="text-gray-500">/5</span>
+                </div>
+                <div>
+                    <div class="flex text-amber-400 mb-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600">Based on 127 reviews</p>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="border-b border-gray-200 pb-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Carlos R.</h3>
+                            <div class="flex text-amber-400 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <span class="text-gray-500 text-sm">2 days ago</span>
+                    </div>
+                    <p class="text-gray-600">The most exquisite tequila I've ever tasted. The bottle is a work of art
+                        and the tequila inside is even better. Smooth with complex flavors that evolve with each sip.
+                    </p>
+                </div>
+
+                <div class="border-b border-gray-200 pb-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Maria L.</h3>
+                            <div class="flex text-amber-400 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <span class="text-gray-500 text-sm">1 week ago</span>
+                    </div>
+                    <p class="text-gray-600">Perfect for special occasions. The vanilla and caramel notes are perfectly
+                        balanced. It's smooth enough to sip neat but also makes incredible cocktails.</p>
+                </div>
+
+                <div class="pb-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">James T.</h3>
+                            <div class="flex text-amber-400 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <span class="text-gray-500 text-sm">2 weeks ago</span>
+                    </div>
+                    <p class="text-gray-600">Worth every cedi. This is a premium tequila that delivers on its promise.
+                        The bottle is beautiful and makes for a great display piece after enjoying the contents.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">You May Also Like</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1590859808575-908a215200f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                        alt="Don Julio Reposado" class="w-full h-64 object-contain p-4">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Don Julio Reposado</h3>
+                        <p class="text-amber-500">GHC 1,200.00</p>
+                        <button class="mt-2 w-full bg-amber-500 text-white py-2 rounded">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1519181245277-cffeb31da2e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                        alt="Casamigos Reposado" class="w-full h-64 object-contain p-4">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Casamigos Reposado</h3>
+                        <p class="text-amber-500">GHC 1,350.00</p>
+                        <button class="mt-2 w-full bg-amber-500 text-white py-2 rounded">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1612536057832-2ff7ead59594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                        alt="Clase Azul Añejo" class="w-full h-64 object-contain p-4">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Clase Azul Añejo</h3>
+                        <p class="text-amber-500">GHC 3,200.00</p>
+                        <button class="mt-2 w-full bg-amber-500 text-white py-2 rounded">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="bg-white"></div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script>
+        // index.js
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Update quantity for main product
+function updateQuantity(change) {
+  const qtyInput = document.getElementById("quantity");
+  let qty = parseInt(qtyInput.value) || 1;
+
+  qty += change;
+  if (qty < 1) qty = 1;
+  if (qty > 5) qty = 5; // limit stock
+  qtyInput.value = qty;
+}
+
+// Add Clase Azul Reposado to cart
+function addToCart() {
+  const qty = parseInt(document.getElementById("quantity").value) || 1;
+  const product = {
+    name: "Clase Azul Reposado",
+    price: 2450,
+    quantity: qty,
+    image: "source files/clase azul.png",
+  };
+
+  // Check if already in cart
+  const existing = cart.find(item => item.name === product.name);
+  if (existing) {
+    existing.quantity += qty;
+  } else {
+    cart.push(product);
+  }
+
+  saveCart();
+  showNotification(`${qty} x ${product.name} added to cart`);
+}
+
+// Add "You May Also Like" products to cart
+document.querySelectorAll(".grid button").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    const card = e.target.closest(".p-4");
+    const name = card.querySelector("h3").innerText;
+    const price = parseFloat(card.querySelector("p").innerText.replace("GHC", "").replace(",", ""));
+    const image = card.parentElement.querySelector("img").src;
+
+    const product = { name, price, quantity: 1, image };
+
+    const existing = cart.find(item => item.name === product.name);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push(product);
+    }
+
+    saveCart();
+    showNotification(`${product.name} added to cart`);
+  });
+});
+
+// Wishlist functionality
+document.querySelector(".fa-heart")?.parentElement.addEventListener("click", () => {
+  const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+  const item = "Clase Azul Reposado";
+  if (!wishlist.includes(item)) {
+    wishlist.push(item);
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    showNotification(`${item} added to wishlist ❤️`);
+  } else {
+    showNotification(`${item} is already in your wishlist`);
+  }
+});
+
+// Save cart to localStorage
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// Show floating notification
+function showNotification(message) {
+  const notification = document.createElement("div");
+  notification.className = "cart-notification";
+  notification.innerText = message;
+
+  document.body.appendChild(notification);
+  setTimeout(() => notification.classList.add("show"), 50);
+
+  setTimeout(() => {
+    notification.classList.remove("show");
+    setTimeout(() => notification.remove(), 500);
+  }, 2500);
+}
+
+    </script>
+</body>
+
+</html>
