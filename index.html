@@ -20,7 +20,7 @@
             </p>
 
             <!-- hamburger menu -->
-            <div id="hamburgerMenu" class="space-y-2 ">
+            <div id="hamburgerMenu" class="space-y-2 lg:hidden">
                 <div id="ham0" class="bg-black w-10 h-1 rounded-[20px] transition-transform "></div>
                 <div id="ham1" class="bg-black w-10 h-1 rounded-[20px]  transition-transform  duration-200"></div>
                 <div id="ham2" class="bg-black w-10 h-1 rounded-[20px] transition-transform  duration-200"></div>
@@ -29,14 +29,22 @@
 
         </div>
 
-        <div id="hamMenuList" class="absolute z-50 flex w-full hidden justify-end transform translate-y-[-10px]">
-            <div class="bg-white px-5 py-2 text-2xl">
-                <div class="text-black flex flex-col space-y-2">
-                    <a href="index.html" class="block ">Home</a>
-                    <a href="shop.html" class="block ">Shop</a>
-                    <a href="#" class="block ">About</a>
-                    <a href="#" class="block ">Contact Us</a>
+        <div id="hamMenuList"
+            class="absolute z-10 flex w-full hidden justify-end  transform translate-y-[-10px] lg:flex md:hidden ">
+            <div class="bg-white lg:bg-transparent lg:transform lg:translate-y-[-2.2rem]  px-5 py-2 text-2xl ">
+                <div class="text-black lg:flex lg:space-x-4 lg:bg-none">
+                    <a href="index.html">Home</a>
+                    <a href="shop.html">
+                        <p>Shop</p>
+                    </a>
+                    <a href="#">
+                        <p>About</p>
+                    </a>
+                    <a href="#">
+                        <p>Contact Us</p>
+                    </a>
                 </div>
+
             </div>
         </div>
 
@@ -65,13 +73,14 @@
     </div>
 
     <!-- liquor categories section -->
+    <div class="text-[1.5rem] font-[600] pl-10 mt-15">
+        Liquor Categories
+    </div>
     <div class="">
-        <div class="text-[1.5rem] font-[600] pl-10 mt-15">
-            Liquor Categories
-        </div>
 
-        <div class="mt-5 grid grid-cols-2">
-            <div>
+
+        <div class="mt-5 grid grid-cols-2 lg:grid lg:grid-cols-4 ">
+            <div class="">
                 <div class="place-self-center">
                     <a href="shop.html#tequila"><img
                             src="https://i.pinimg.com/736x/17/73/2c/17732c9e5887952e606a2a9862cc1c85.jpg" alt=""
@@ -84,19 +93,20 @@
 
             </div>
 
-            <div>
+            <div class="lg:place-self-center">
                 <div>
-                    <a href="shop.html#whiteSpirits"><img src="https://i.pinimg.com/736x/a9/ce/20/a9ce20e0e41052e13c279f7bd133e8be.jpg" alt=""
-                        class="w-[11rem] h-[10rem] object-cover"></a>
+                    <a href="shop.html#whiteSpirits"><img
+                            src="https://i.pinimg.com/736x/a9/ce/20/a9ce20e0e41052e13c279f7bd133e8be.jpg" alt=""
+                            class="w-[11rem] h-[10rem] object-cover"></a>
                 </div>
 
-                <div class="place-self-center mt-3 font-[600] text-xl">
-                    White Spirits
+                <div class="place-self-center mt-3 font-[600] text-xl ">
+                    <p class="lg:">White Spirits</p>
                 </div>
 
             </div>
 
-            <div>
+            <div class="lg:place-self-center">
                 <div>
                     <img src="https://i.pinimg.com/736x/07/48/d9/0748d9dc3bb3bed7ee62477e2fa74c30.jpg" alt="wine"
                         class="w-[11rem] h-[10rem] pl-3 object-cover">
@@ -108,7 +118,7 @@
 
             </div>
 
-            <div>
+            <div class="lg:place-self-center">
                 <div>
                     <img src="https://i.pinimg.com/736x/a4/45/ad/a445ad87a533f9de6b0267a861a08ded.jpg" alt="champagne"
                         class="w-[11rem] h-[10rem] ">
@@ -130,7 +140,7 @@
             </p>
         </div>
 
-        <div class="flex flex-col space-y-15 mt-10 place-self-center">
+        <div class="flex flex-col space-y-15 mt-10 place-self-center lg:grid lg:grid-cols-2 lg:space-x-30">
             <div class="">
                 <img src="source files/b label.png" alt="black label" class="w-[21rem] h-[22rem] object-cover">
 
@@ -163,27 +173,29 @@
         </div>
 
         <div class="">
-            <div class="relative place-self-center">
-                <img src="source files/glenfiddich vat02.png" alt="whisky wonders" class="w-[20rem] h-[20rem]">
+            <div class="relative place-self-center lg:grid lg:grid-cols-3 lg:space-x-20">
+                <div class="">
+                    <img src="source files/glenfiddich vat02.png" alt="whisky wonders" class="w-[20rem] h-[20rem]">
 
-                <div class="absolute bg-black/10 inset-0 w-[20rem] h-[20rem]">
-                    <p class="text-white bg-red-700 w-20 px-1">
-                        Save 20%
-                    </p>
-                </div>
+                    <div class="absolute bg-black/10 inset-0 w-[20rem] h-[20rem]">
+                        <p class="text-white bg-red-700 w-20 px-1">
+                            Save 20%
+                        </p>
+                    </div>
 
-                <div class="place-self-center">
-                    <p class="font-[600] text-xl">
-                        Whisky wonders
-                    </p>
+                    <div class="place-self-center">
+                        <p class="font-[600] text-xl">
+                            Whisky wonders
+                        </p>
 
-                    <p>
-                        Glenfiddich
-                    </p>
-                    <p>
-                        GHC <span class="italic">900</span>
-                    </p>
+                        <p>
+                            Glenfiddich
+                        </p>
+                        <p>
+                            GHC <span class="italic">900</span>
+                        </p>
 
+                    </div>
                 </div>
 
                 <!-- shop category 2 vodka vault -->
@@ -209,193 +221,193 @@
                         </p>
 
                     </div>
+                </div>
 
-                    <!-- shop category 2 vodka vault -->
-                    <div class="relative place-self-center">
-                        <img src="source files/bacardi rum.png" alt="whisky wonders" class="w-[20rem] h-[20rem]">
+                <!-- shop category 2 vodka vault -->
+                <div class="relative place-self-center">
+                    <img src="source files/bacardi rum.png" alt="whisky wonders" class="w-[20rem] h-[20rem]">
 
-                        <div class="absolute bg-black/10 inset-0 w-[20rem] h-[20rem]">
-                            <p class="text-white bg-red-700 w-20 px-1">
-                                Save 25%
-                            </p>
-                        </div>
+                    <div class="absolute bg-black/10 inset-0 w-[20rem] h-[20rem]">
+                        <p class="text-white bg-red-700 w-20 px-1">
+                            Save 25%
+                        </p>
+                    </div>
 
-                        <div class="place-self-center">
-                            <p class="font-[600] text-xl">
-                                Cocktail classics
-                            </p>
+                    <div class="place-self-center">
+                        <p class="font-[600] text-xl">
+                            Cocktail classics
+                        </p>
 
-                            <p>
-                                Bacardi
-                            </p>
-                            <p>
-                                GHC <span class="italic">870</span>
-                            </p>
-
-                        </div>
+                        <p>
+                            Bacardi
+                        </p>
+                        <p>
+                            GHC <span class="italic">870</span>
+                        </p>
 
                     </div>
+
                 </div>
             </div>
+        </div>
 
-            <!-- contact section -->
-            <div>
-                <div class="text-[1.8rem] font-[600] place-self-center mt-15">
-                    CONTACT US
-                </div>
-
-                <!--phone icon and number/contact  -->
-                <div class="flex space-x-3 place-self-center">
-                    <div class="place-self-center mt-5">
-                        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path
-                                    d="M14.3308 15.9402L15.6608 14.6101C15.8655 14.403 16.1092 14.2384 16.3778 14.1262C16.6465 14.014 16.9347 13.9563 17.2258 13.9563C17.517 13.9563 17.8052 14.014 18.0739 14.1262C18.3425 14.2384 18.5862 14.403 18.7908 14.6101L20.3508 16.1702C20.5579 16.3748 20.7224 16.6183 20.8346 16.887C20.9468 17.1556 21.0046 17.444 21.0046 17.7351C21.0046 18.0263 20.9468 18.3146 20.8346 18.5833C20.7224 18.8519 20.5579 19.0954 20.3508 19.3L19.6408 20.02C19.1516 20.514 18.5189 20.841 17.8329 20.9541C17.1469 21.0672 16.4427 20.9609 15.8208 20.6501C10.4691 17.8952 6.11008 13.5396 3.35083 8.19019C3.03976 7.56761 2.93414 6.86242 3.04914 6.17603C3.16414 5.48963 3.49384 4.85731 3.99085 4.37012L4.70081 3.65015C5.11674 3.23673 5.67937 3.00464 6.26581 3.00464C6.85225 3.00464 7.41488 3.23673 7.83081 3.65015L9.40082 5.22021C9.81424 5.63615 10.0463 6.19871 10.0463 6.78516C10.0463 7.3716 9.81424 7.93416 9.40082 8.3501L8.0708 9.68018C8.95021 10.8697 9.91617 11.9926 10.9608 13.04C11.9994 14.0804 13.116 15.04 14.3008 15.9102L14.3308 15.9402Z"
-                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                </path>
-                            </g>
-                        </svg>
-                    </div>
-
-
-                    <div class="text-xl place-self-center font-[600] pt-3">
-                        +233 24 976 2228
-                    </div>
-                </div>
-
+        <!-- contact section -->
+        <div>
+            <div class="text-[1.8rem] font-[600] place-self-center mt-15">
+                CONTACT US
             </div>
-            <!-- instagram -->
-            <div class="flex place-self-center pt-2">
-                <div>
+
+            <!--phone icon and number/contact  -->
+            <div class="flex space-x-3 place-self-center">
+                <div class="place-self-center mt-5">
                     <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                         <g id="SVGRepo_iconCarrier">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-                                fill="#0F0F0F"></path>
                             <path
-                                d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
-                                fill="#0F0F0F"></path>
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
-                                fill="#0F0F0F"></path>
-                        </g>
-                    </svg>
-                </div>
-                <a href="https://www.instagram.com/8chills_liquorstore?igsh=MWg3eXlrOHloOGdraQ%3D%3D">
-                    <p class="text-xl font-[600] pl-2">
-                        8Chills_liquorstore
-                    </p>
-                </a>
-            </div>
-
-            <!-- whatsapp -->
-            <div class="flex place-self-center pt-2 space-x-2">
-                <div>
-                    <svg width="30px" height="30px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <title>whatsapp [#128]</title>
-                            <desc>Created with Sketch.</desc>
-                            <defs> </defs>
-                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7599.000000)"
-                                    fill="#000000">
-                                    <g id="icons" transform="translate(56.000000, 160.000000)">
-                                        <path
-                                            d="M259.821,7453.12124 C259.58,7453.80344 258.622,7454.36761 257.858,7454.53266 C257.335,7454.64369 256.653,7454.73172 254.355,7453.77943 C251.774,7452.71011 248.19,7448.90097 248.19,7446.36621 C248.19,7445.07582 248.934,7443.57337 250.235,7443.57337 C250.861,7443.57337 250.999,7443.58538 251.205,7444.07952 C251.446,7444.6617 252.034,7446.09613 252.104,7446.24317 C252.393,7446.84635 251.81,7447.19946 251.387,7447.72462 C251.252,7447.88266 251.099,7448.05372 251.27,7448.3478 C251.44,7448.63589 252.028,7449.59418 252.892,7450.36341 C254.008,7451.35771 254.913,7451.6748 255.237,7451.80984 C255.478,7451.90987 255.766,7451.88687 255.942,7451.69881 C256.165,7451.45774 256.442,7451.05762 256.724,7450.6635 C256.923,7450.38141 257.176,7450.3464 257.441,7450.44643 C257.62,7450.50845 259.895,7451.56477 259.991,7451.73382 C260.062,7451.85686 260.062,7452.43903 259.821,7453.12124 M254.002,7439 L253.997,7439 L253.997,7439 C248.484,7439 244,7443.48535 244,7449 C244,7451.18666 244.705,7453.21526 245.904,7454.86076 L244.658,7458.57687 L248.501,7457.3485 C250.082,7458.39482 251.969,7459 254.002,7459 C259.515,7459 264,7454.51465 264,7449 C264,7443.48535 259.515,7439 254.002,7439"
-                                            id="whatsapp-[#128]"> </path>
-                                    </g>
-                                </g>
-                            </g>
+                                d="M14.3308 15.9402L15.6608 14.6101C15.8655 14.403 16.1092 14.2384 16.3778 14.1262C16.6465 14.014 16.9347 13.9563 17.2258 13.9563C17.517 13.9563 17.8052 14.014 18.0739 14.1262C18.3425 14.2384 18.5862 14.403 18.7908 14.6101L20.3508 16.1702C20.5579 16.3748 20.7224 16.6183 20.8346 16.887C20.9468 17.1556 21.0046 17.444 21.0046 17.7351C21.0046 18.0263 20.9468 18.3146 20.8346 18.5833C20.7224 18.8519 20.5579 19.0954 20.3508 19.3L19.6408 20.02C19.1516 20.514 18.5189 20.841 17.8329 20.9541C17.1469 21.0672 16.4427 20.9609 15.8208 20.6501C10.4691 17.8952 6.11008 13.5396 3.35083 8.19019C3.03976 7.56761 2.93414 6.86242 3.04914 6.17603C3.16414 5.48963 3.49384 4.85731 3.99085 4.37012L4.70081 3.65015C5.11674 3.23673 5.67937 3.00464 6.26581 3.00464C6.85225 3.00464 7.41488 3.23673 7.83081 3.65015L9.40082 5.22021C9.81424 5.63615 10.0463 6.19871 10.0463 6.78516C10.0463 7.3716 9.81424 7.93416 9.40082 8.3501L8.0708 9.68018C8.95021 10.8697 9.91617 11.9926 10.9608 13.04C11.9994 14.0804 13.116 15.04 14.3008 15.9102L14.3308 15.9402Z"
+                                stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
                         </g>
                     </svg>
                 </div>
 
-                <div class="text-xl font-[600] ">
+
+                <div class="text-xl place-self-center font-[600] pt-3">
                     +233 24 976 2228
                 </div>
             </div>
 
-
         </div>
-        <!-- footer -->
-        <div class="bg-black/90 mt-20">
-            <div class="text-white pt-15 pl-10">
-                <p class="italic text-3xl">
-                    <span class="text-blue-500">8Chills </span>
-                </p>
+        <!-- instagram -->
+        <div class="flex place-self-center pt-2">
+            <div>
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                            fill="#0F0F0F"></path>
+                        <path
+                            d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                            fill="#0F0F0F"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                            fill="#0F0F0F"></path>
+                    </g>
+                </svg>
             </div>
+            <a href="https://www.instagram.com/8chills_liquorstore?igsh=MWg3eXlrOHloOGdraQ%3D%3D">
+                <p class="text-xl font-[600] pl-2">
+                    8Chills_liquorstore
+                </p>
+            </a>
+        </div>
 
-            <div class="pt-5 flex space-x-5 pl-10">
-                <!-- instagram icon -->
-                <div>
-                    <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-                                fill="#fff"></path>
-                            <path
-                                d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
-                                fill="#fff"></path>
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
-                                fill="#fff"></path>
+        <!-- whatsapp -->
+        <div class="flex place-self-center pt-2 space-x-2">
+            <div>
+                <svg width="30px" height="30px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <title>whatsapp [#128]</title>
+                        <desc>Created with Sketch.</desc>
+                        <defs> </defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7599.000000)"
+                                fill="#000000">
+                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                    <path
+                                        d="M259.821,7453.12124 C259.58,7453.80344 258.622,7454.36761 257.858,7454.53266 C257.335,7454.64369 256.653,7454.73172 254.355,7453.77943 C251.774,7452.71011 248.19,7448.90097 248.19,7446.36621 C248.19,7445.07582 248.934,7443.57337 250.235,7443.57337 C250.861,7443.57337 250.999,7443.58538 251.205,7444.07952 C251.446,7444.6617 252.034,7446.09613 252.104,7446.24317 C252.393,7446.84635 251.81,7447.19946 251.387,7447.72462 C251.252,7447.88266 251.099,7448.05372 251.27,7448.3478 C251.44,7448.63589 252.028,7449.59418 252.892,7450.36341 C254.008,7451.35771 254.913,7451.6748 255.237,7451.80984 C255.478,7451.90987 255.766,7451.88687 255.942,7451.69881 C256.165,7451.45774 256.442,7451.05762 256.724,7450.6635 C256.923,7450.38141 257.176,7450.3464 257.441,7450.44643 C257.62,7450.50845 259.895,7451.56477 259.991,7451.73382 C260.062,7451.85686 260.062,7452.43903 259.821,7453.12124 M254.002,7439 L253.997,7439 L253.997,7439 C248.484,7439 244,7443.48535 244,7449 C244,7451.18666 244.705,7453.21526 245.904,7454.86076 L244.658,7458.57687 L248.501,7457.3485 C250.082,7458.39482 251.969,7459 254.002,7459 C259.515,7459 264,7454.51465 264,7449 C264,7443.48535 259.515,7439 254.002,7439"
+                                        id="whatsapp-[#128]"> </path>
+                                </g>
+                            </g>
                         </g>
-                    </svg>
-                </div>
-
-                <!-- tiktok icon -->
-                <div class="pb-2 transform -translate-y-1">
-                    <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z"
-                                stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path
-                                d="M10 12C8.34315 12 7 13.3431 7 15C7 16.6569 8.34315 18 10 18C11.6569 18 13 16.6569 13 15V6C13.3333 7 14.6 9 17 9"
-                                stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                    </svg>
-                </div>
-
-
+                    </g>
+                </svg>
             </div>
 
-            <div class="text-white/80 text-xl pl-10 pt-5">
-                <p>
-                    Shop
-                </p>
-
-                <p>
-                    Contact
-                </p>
-
-                <p>
-                    Privacy Policy
-                </p>
-
-                <p>
-                    Refund and Returns Policy
-                </p>
+            <div class="text-xl font-[600] ">
+                +233 24 976 2228
             </div>
+        </div>
 
-            <p class="place-self-center text-white text-sm pt-20 pb-2">
-                &copy; 2025 8Chills liquor. All rights reserved.
+
+    </div>
+    <!-- footer -->
+    <div class="bg-black/90 mt-20">
+        <div class="text-white pt-15 pl-10">
+            <p class="italic text-3xl">
+                <span class="text-blue-500">8Chills </span>
             </p>
         </div>
 
-        <script src="index.js"></script>
+        <div class="pt-5 flex space-x-5 pl-10">
+            <!-- instagram icon -->
+            <div>
+                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                            fill="#fff"></path>
+                        <path
+                            d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                            fill="#fff"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                            fill="#fff"></path>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- tiktok icon -->
+            <div class="pb-2 transform -translate-y-1">
+                <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z"
+                            stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path
+                            d="M10 12C8.34315 12 7 13.3431 7 15C7 16.6569 8.34315 18 10 18C11.6569 18 13 16.6569 13 15V6C13.3333 7 14.6 9 17 9"
+                            stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+            </div>
+
+
+        </div>
+
+        <div class="text-white/80 text-xl pl-10 pt-5 lg:flex lg:justify-end lg:space-x-10 mr-5">
+            <p class="whitespace">
+                Shop    <span class="ml-5">|</span>
+            </p>
+
+            <p>
+                Contact <span class="ml-5">|</span>
+            </p>
+
+            <p>
+                Privacy Policy <span class="ml-5">|</span>
+            </p>
+
+            <p>
+                Refund and Returns Policy
+            </p>
+        </div>
+
+        <p class="place-self-center text-white text-sm pt-20 pb-2">
+            &copy; 2025 8Chills liquor. All rights reserved.
+        </p>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 
 </html>

@@ -24,7 +24,7 @@
                 </p>
 
                 <!-- hamburger menu -->
-                <div id="hamburgerMenu" class="space-y-2 ">
+                <div id="hamburgerMenu" class="space-y-2 lg:hidden md:hidden ">
                     <div id="ham0" class="bg-black w-10 h-1 rounded-[20px] transition-transform "></div>
                     <div id="ham1" class="bg-black w-10 h-1 rounded-[20px]  transition-transform  duration-200"></div>
                     <div id="ham2" class="bg-black w-10 h-1 rounded-[20px] transition-transform  duration-200"></div>
@@ -33,9 +33,9 @@
 
             </div>
 
-            <div id="hamMenuList" class="absolute z-10 flex w-full hidden justify-end  transform translate-y-[-10px]">
-                <div class="bg-white px-5 py-2 text-2xl ">
-                    <div class="text-black ">
+            <div id="hamMenuList" class="absolute z-10 flex w-full hidden justify-end  transform translate-y-[-10px] lg:flex md:hidden ">
+                <div class="bg-white lg:bg-transparent lg:transform lg:translate-y-[-2.2rem]  px-5 py-2 text-2xl ">
+                    <div class="text-black lg:flex lg:space-x-4 lg:bg-none">
                         <a href="index.html">Home</a>
                         <a href="shop.html">
                             <p>Shop</p>
@@ -115,10 +115,12 @@
         <!-- Tequila section -->
 
                 <!-- Tequila section -->
-        <div id="tequilaqq" class="mt-5 mx-10">
-            <div class="text-[2rem] mb-3">
+         <div class="text-[2rem] mb-3 ml-5">
                 Tequila
-            </div>
+            </div> 
+        
+                <div id="tequilaqq" class="mt-5 mx-10 lg:grid lg:grid-cols-4 lg:mx-3">
+           
             <!-- Don Julio -->
             <div id="bLabel" class="relative place-self-center mb-5">
                 <a href="don julio description.html"><img src="source files/don julio.png" alt="Tequila"
@@ -197,12 +199,13 @@
         </div>
 
         <!-- White Spirits section -->
-        <div id="whiteSpirits" class="mt-10 mx-10">
-            <div class="text-[2rem] mb-3">
+        <div class="text-[2rem] mb-3 ml-5">
                 White Spirits
             </div>
+        <div id="whiteSpirits" class="mt-10 mx-10 lg:grid lg:grid-cols-4 lg:mx-3">
+            
             <!-- Smirnoff -->
-            <div id="bLabel" class="relative place-self-center mb-5">
+            <div id="bLabel" class="relative place-self-center mb-5 ">
                 <img src="source files/smirnoff.png" alt="Vodka"
                     class="w-[20rem] h-[23rem] object-cover">
                 <div class="absolute bg-black/10 inset-0 w-[20rem] h-[23rem]">
@@ -263,10 +266,11 @@
         </div>
 
         <!-- Wines section -->
-        <div id="wines" class="mt-10 mx-10">
-            <div class="text-[2rem] mb-3">
+        <div class="text-[2rem] mb-3 ml-5">
                 Wines
             </div>
+        <div id="wines" class="mt-10 mx-10 lg:grid lg:grid-cols-4 lg:mx-3">
+            
             <!-- Example wine products (4) -->
             <div id="bLabel" class="relative place-self-center mb-5">
                 <img src="source files/jacobs creek.png" alt="Wine"
@@ -326,10 +330,11 @@
         </div>
 
         <!-- Champagne & Sparkling Wine -->
-        <div id="champagne" class="mt-10 mx-10">
-            <div class="text-[2rem] mb-3">
+        <div class="text-[2rem] mb-3 ml-5">
                 Champagne & Sparkling Wine
             </div>
+        <div id="champagne" class="mt-10 mx-10 lg:grid lg:grid-cols-4 lg:mx-3">
+            
             <!-- Moët & Chandon -->
             <div id="bLabel" class="relative place-self-center mb-5">
                 <img src="source files/moet.png" alt="Champagne"
