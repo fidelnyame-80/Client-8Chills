@@ -38,7 +38,7 @@ shopCatalogue.addEventListener('click',()=>{
 });
 
 
-// 
+
 
 
 
