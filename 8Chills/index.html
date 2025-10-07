@@ -7,79 +7,90 @@
     <title>8Chills</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+
 
 </head>
 
 <body>
     <!-- nav section -->
-    <div class="">
-        <!-- 8chills logo and hamburger menu -->
-        <div class="flex space-x-[6rem] mt-7 px-4">
-            <p class="text-2xl pl-6">
-                <span class="italic font-[700]">8Chills</span> <span class="invisible">Liquor Store</span>
-            </p>
+    <div class="lg:mb-5">
+            <!-- 8chills logo and hamburger menu -->
+            <div class="flex space-x-[12rem] mt-3 lg:space-x-[6rem]  px-4">
+                <!-- 8chills logo -->
+                <div class="lg:w-[150px] lg:h-[100px] w-[110px] h-[110px] lg:ml-20">
+                    <img src="source files/8chills logo .png" class="object-cover w-[150px] h-[100px]" alt="">
+                </div>
 
-            <!-- hamburger menu -->
-            <div id="hamburgerMenu" class="space-y-2 lg:hidden">
-                <div id="ham0" class="bg-black w-10 h-1 rounded-[20px] transition-transform "></div>
-                <div id="ham1" class="bg-black w-10 h-1 rounded-[20px]  transition-transform  duration-200"></div>
-                <div id="ham2" class="bg-black w-10 h-1 rounded-[20px] transition-transform  duration-200"></div>
-            </div>
-
-
-        </div>
-
-        <div id="hamMenuList"
-            class="absolute z-10 flex w-full hidden justify-end  transform translate-y-[-10px] lg:flex md:hidden ">
-            <div class="bg-white lg:bg-transparent lg:transform lg:translate-y-[-2.2rem]  px-5 py-2 text-2xl ">
-                <div class="text-black lg:flex lg:space-x-4 lg:bg-none">
-                    <a href="index.html">Home</a>
-                    <a href="shop.html">
-                        <p>Shop</p>
-                    </a>
-                    <a href="#">
-                        <p>About</p>
-                    </a>
-                    <a href="#">
-                        <p>Contact Us</p>
-                    </a>
+                <!-- hamburger menu -->
+                <div class=" mt-8">
+                    <div id="hamburgerMenu" class="space-y-2  lg:hidden md:hidden ">
+                        <div id="ham0" class="bg-black w-10 h-1 rounded-[20px] transition-transform "></div>
+                        <div id="ham1" class="bg-black w-10 h-1 rounded-[20px]  transition-transform  duration-200">
+                        </div>
+                        <div id="ham2" class="bg-black w-10 h-1 rounded-[20px] transition-transform  duration-200">
+                        </div>
+                    </div>
                 </div>
 
             </div>
+
+            <div id="hamMenuList" class="absolute z-20 flex w-full hidden justify-end  transform  lg:flex md:hidden ">
+                <div class="bg-white lg:bg-transparent lg:transform lg:translate-y-[-4rem]  px-5 py-2 text-2xl ">
+                    <div
+                        class="text-black font-['Montserrat',_sans-serif] font-[500] lg:text-lg text-md lg:space-x-10 lg:mr-15 lg:flex lg:space-x-4 uppercase lg:bg-none">
+                        <a href="index.html" class="">Home</a>
+                        <a href="shop.html">
+                            <p>Shop</p>
+                        </a>
+                        <a href="#">
+                            <p>About</p>
+                        </a>
+                        <a href="#">
+                            <p>Contact Us</p>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- <hr class="w-[22rem] place-self-center mt-5"> -->
         </div>
 
-        <!-- <hr class="w-[22rem] place-self-center mt-5"> -->
-    </div>
-
     <!-- hero section -->
-    <div class="relative w-full min-h-[70vh] ">
+    <div class="relative w-full min-h-[80vh] ">
         <!-- hero image -->
         <img src="source files/WhatsApp Image 2025-09-07 at 10.33.50_404af03f.jpg" alt="Hero Image"
-            class="w-full h-[70vh] object-cover absolute inset-0">
+            class="w-full h-[80vh] object-cover absolute inset-0">
 
         <!-- dark overlay -->
         <div class="absolute inset-0 bg-black/40"></div>
 
         <!-- hero text -->
         <div class="relative flex flex-col items-center justify-center h-[70vh] text-center z-10">
-            <p class="text-white text-3xl font-bold">Welcome to 8Chills</p>
-            <p class="text-white text-xl mt-5">Redefining luxury in every pour. 🥂</p>
+            <p class="text-white text-[2.5rem] font-[800] font-[Cormorant] ">Welcome to 8Chills</p>
+            <p class="text-white text-xl mt-5 font-['Montserrat',_sans-serif]">Redefining luxury in every pour. 🥂</p>
 
             <a href="shop.html"><button class="mt-10 px-6 py-3 bg-amber-300 text-black font-semibold rounded 
-             hover:bg-amber-400 transition duration-1000 ease-in-out ">
+             hover:bg-amber-400 transition duration-1000 ease-in-out font-['Montserrat',_sans-serif]">
                     SHOP NOW
                 </button></a>
         </div>
     </div>
 
     <!-- liquor categories section -->
-    <div class="text-[1.5rem] font-[600] pl-10 mt-15">
+    <div class="text-[1.5rem] font-[600] pl-10 mt-15 font-['Montserrat',_sans-serif]">
         Liquor Categories
     </div>
     <div class="">
 
 
-        <div class="mt-5 grid grid-cols-2 lg:grid lg:grid-cols-4 ">
+        <div class="mt-5 grid grid-cols-2 lg:grid lg:grid-cols-4 font-['Montserrat',_sans-serif]">
             <div class="">
                 <div class="place-self-center">
                     <a href="shop.html#tequila"><img
@@ -87,7 +98,7 @@
                             class="w-[11rem] h-[10rem] object-cover "></a>
                 </div>
 
-                <div class="place-self-center mt-3 font-[600] text-xl">
+                <div class="place-self-center mt-3  text-xl">
                     Tequila
                 </div>
 
@@ -100,7 +111,7 @@
                             class="w-[11rem] h-[10rem] object-cover"></a>
                 </div>
 
-                <div class="place-self-center mt-3 font-[600] text-xl ">
+                <div class="place-self-center mt-3  text-xl ">
                     <p class="lg:">White Spirits</p>
                 </div>
 
@@ -112,7 +123,7 @@
                         class="w-[11rem] h-[10rem] pl-3 object-cover">
                 </div>
 
-                <div class="place-self-center text-xl font-[600]">
+                <div class="place-self-center text-xl ">
                     Wines
                 </div>
 
@@ -124,7 +135,7 @@
                         class="w-[11rem] h-[10rem] ">
                 </div>
 
-                <div class="place-self-center text-xl font-[600]">
+                <div class="place-self-center text-xl ">
                     Champagne & Sparkling wine
                 </div>
 
@@ -134,7 +145,7 @@
 
     <div>
         <div>
-            <p class="text-[1.5rem] font-[600] mt-10 ml-10">
+            <p class="text-[1.5rem] font-[600] mt-10 ml-10 font-['Montserrat',_sans-serif]">
                 Bestsellers
 
             </p>
@@ -144,11 +155,11 @@
             <div class="">
                 <img src="source files/b label.png" alt="black label" class="w-[21rem] h-[22rem] object-cover">
 
-                <p class="font-[600] place-self-center text-lg">
+                <p class="font-[600] place-self-center text-lg font-['Montserrat',_sans-serif]">
                     Johnie Walker
                 </p>
 
-                <p class="place-self-center">
+                <p class="place-self-center font-['Montserrat',_sans-serif]">
                     Black Label
                 </p>
             </div>
@@ -156,11 +167,11 @@
             <div class="">
                 <img src="source files/jack daniels.png" alt="jack daniels" class="w-[21rem] h-[22rem] object-cover">
 
-                <p class="font-[600] place-self-center text-lg">
+                <p class="font-[600] place-self-center text-lg font-['Montserrat',_sans-serif]">
                     Jack Daniels
                 </p>
 
-                <p class="place-self-center">
+                <p class="place-self-center font-['Montserrat',_sans-serif]">
                     Tennessee
                 </p>
             </div>
@@ -168,7 +179,7 @@
     </div>
 
     <div>
-        <div class="mt-10 text-[1.5rem] font-[600] ml-15">
+        <div class="mt-10 text-[1.5rem] font-[600] ml-15 font-['Montserrat',_sans-serif]">
             SHOP
         </div>
 
@@ -178,13 +189,13 @@
                     <img src="source files/glenfiddich vat02.png" alt="whisky wonders" class="w-[20rem] h-[20rem]">
 
                     <div class="absolute bg-black/10 inset-0 w-[20rem] h-[20rem]">
-                        <p class="text-white bg-red-700 w-20 px-1">
+                        <p class="text-white bg-red-700 w-20 px-1 font-['Montserrat',_sans-serif]">
                             Save 20%
                         </p>
                     </div>
 
-                    <div class="place-self-center">
-                        <p class="font-[600] text-xl">
+                    <div class="place-self-center font-['Montserrat',_sans-serif]">
+                        <p class="font-[600] text-xl ">
                             Whisky wonders
                         </p>
 
@@ -202,13 +213,13 @@
                 <div class="relative place-self-center">
                     <img src="source files/vodka.png" alt="whisky wonders" class="w-[20rem] h-[20rem]">
 
-                    <div class="absolute bg-black/10 inset-0 w-[20rem] h-[20rem]">
+                    <div class="absolute bg-black/10 inset-0 w-[20rem] h-[20rem] font-['Montserrat',_sans-serif]">
                         <p class="text-white bg-red-700 w-20 px-1">
                             Popular
                         </p>
                     </div>
 
-                    <div class="place-self-center">
+                    <div class="place-self-center font-['Montserrat',_sans-serif]">
                         <p class="font-[600] text-xl">
                             Vodka Vault
                         </p>
@@ -227,13 +238,13 @@
                 <div class="relative place-self-center">
                     <img src="source files/bacardi rum.png" alt="whisky wonders" class="w-[20rem] h-[20rem]">
 
-                    <div class="absolute bg-black/10 inset-0 w-[20rem] h-[20rem]">
+                    <div class="absolute bg-black/10 inset-0 w-[20rem] h-[20rem] font-['Montserrat',_sans-serif]">
                         <p class="text-white bg-red-700 w-20 px-1">
                             Save 25%
                         </p>
                     </div>
 
-                    <div class="place-self-center">
+                    <div class="place-self-center font-['Montserrat',_sans-serif]">
                         <p class="font-[600] text-xl">
                             Cocktail classics
                         </p>
@@ -253,7 +264,7 @@
 
         <!-- contact section -->
         <div>
-            <div class="text-[1.8rem] font-[600] place-self-center mt-15">
+            <div class="text-[1.8rem] font-[600] place-self-center mt-15 font-['Montserrat',_sans-serif]">
                 CONTACT US
             </div>
 
@@ -273,7 +284,7 @@
                 </div>
 
 
-                <div class="text-xl place-self-center font-[600] pt-3">
+                <div class="text-xl place-self-center font-[600] pt-3 font-['Montserrat',_sans-serif]">
                     +233 24 976 2228
                 </div>
             </div>
@@ -299,7 +310,7 @@
                 </svg>
             </div>
             <a href="https://www.instagram.com/8chills_liquorstore?igsh=MWg3eXlrOHloOGdraQ%3D%3D">
-                <p class="text-xl font-[600] pl-2">
+                <p class="text-xl font-[600] pl-2 font-['Montserrat',_sans-serif]">
                     8Chills_liquorstore
                 </p>
             </a>
@@ -330,7 +341,7 @@
                 </svg>
             </div>
 
-            <div class="text-xl font-[600] ">
+            <div class="text-xl font-[600] font-['Montserrat',_sans-serif]">
                 +233 24 976 2228
             </div>
         </div>
@@ -339,9 +350,9 @@
     </div>
     <!-- footer -->
     <div class="bg-black/90 mt-20">
-        <div class="text-white pt-15 pl-10">
+        <div class="text-white pt-15 pl-10 font-['Montserrat',_sans-serif]">
             <p class="italic text-3xl">
-                <span class="text-blue-500">8Chills </span>
+                <span class="text-blue-500 ">8Chills </span>
             </p>
         </div>
 
@@ -384,25 +395,34 @@
 
         </div>
 
-        <div class="text-white/80 text-xl pl-10 pt-5 lg:flex lg:justify-end lg:space-x-10 mr-5">
-            <a href="shop.html"><p class="">
-                Shop    <span class="ml-5 hidden lg:inline">|</span >
-            </p></a>
+        <div
+            class="text-white/80 text-xl pl-10 pt-5 lg:flex lg:justify-end lg:space-x-10 mr-5 font-['Montserrat',_sans-serif]">
+            <a href="shop.html">
+                <p class="">
+                    Shop <span class="ml-5 hidden lg:inline">|</span>
+                </p>
+            </a>
 
-            <a href=""><p>
-                Contact <span class="ml-5 hidden lg:inline">|</span>
-            </p></a>
+            <a href="">
+                <p>
+                    Contact <span class="ml-5 hidden lg:inline">|</span>
+                </p>
+            </a>
 
-            <a href=""><p>
-                Privacy Policy <span class="ml-5 hidden lg:inline">|</span>
-            </p></a>
+            <a href="">
+                <p>
+                    Privacy Policy <span class="ml-5 hidden lg:inline">|</span>
+                </p>
+            </a>
 
-            <a href=""><p>
-                Refund and Returns Policy
-            </p></a>
+            <a href="">
+                <p>
+                    Refund and Returns Policy
+                </p>
+            </a>
         </div>
 
-        <p class="place-self-center text-white text-sm pt-20 pb-2">
+        <p class="place-self-center text-white text-sm pt-20 pb-2 font-['Montserrat',_sans-serif]">
             &copy; 2025 8Chills liquor. All rights reserved.
         </p>
     </div>
